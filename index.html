@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Assstterrrroiiiiddss</title>
+    <title>SMASHtroids</title>
   </head>
   <body>
-    <canvas class='game-canvas'></canvas>
+    <div id="backgr" style:"background-image: url('http://www.sarasotalearningcottage.com/wp-content/uploads/2013/07/space-background.jpg')" >
+      <canvas class='game-canvas' id="game-canvas"></canvas>
+
+      <img src="http://www.sarasotalearningcottage.com/wp-content/uploads/2013/07/space-background.jpg" id="background"
+      style="position:fixed;top:0;left:0;z-index:-1;" />
+
+      <!-- <img src="SMASHtroids-welcome.png" id="welcome" /> -->
+
+      <div class="scoreboard"
+        style="position:fixed;top:20px;left:20px;background:lightgray;height:80px;width:160px;border:5px solid black;border-radius:0.5em;z-index:-1">
+      </div>
+
+      <!-- <div class="start-box" style="position:fixed;top:0;left:0;" >
+        <button class="start" style="text-align:center;">Start Game</button>
+      </div> -->
+    </div>
 
 
     <script src="lib/keymaster.js"></script>
@@ -16,6 +31,9 @@
     <script src='lib/game.js'></script>
     <script src='lib/gameView.js'></script>
     <script>
+      var bgImg = document.getElementById("background");
+      bgImg.height = window.innerHeight - 100;
+      bgImg.width = window.innerWidth - 100;
       var canvas = document.getElementsByClassName('game-canvas')[0];
       canvas.height = window.innerHeight - 100;
       canvas.width = window.innerWidth - 100;
