@@ -8,7 +8,7 @@
     opts.vel = AS.util.randv(7);
     AS.MovingObject.call(this, opts);
     this.img = new Image();
-    this.img.src = 'asteroid2.png';
+    this.img.src = '../images/asteroid2.png';
     this.imgRadius = IMGRADIUS;
   };
 

@@ -14,12 +14,12 @@
   AS.Game.prototype.drawScore = function(ctx) {
     ctx.fillStyle = "black";
     ctx.font = "italic "+14+"pt Arial ";
-    ctx.fillText(this.score , 80, 60);
+    ctx.fillText(this.score , 90, 70);
   };
 
   AS.Game.prototype.drawStart = function(ctx) {
     var img = document.createElement('img');
-    img.src = 'SMASHtroids-welcome.png';
+    img.src = '../images/SMASHtroids-welcome.png';
     img.onload = function () {
     ctx.drawImage(img,this.DIM_X/2 - 300, this.DIM_Y/2 - 200, 600, 400);
   }.bind(this);
@@ -125,7 +125,7 @@
     // ctx.fillRect(this.DIM_X/2 - 100, this.DIM_Y/2 - 100, 200, 200);
 
     var img = document.createElement('img');
-    img.src = 'SMASHtroids-gameover-02.png';
+    img.src = '../images/SMASHtroids-gameover-02.png';
     this.draw(ctx);
     img.onload = function () {
     ctx.drawImage(img,this.DIM_X/2 - 300, this.DIM_Y/2 - 200, 600, 400);

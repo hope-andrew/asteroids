@@ -7,7 +7,7 @@
      opts.vel = [0,0];
      AS.MovingObject.call(this, opts);
      this.img = new Image();
-     this.img.src = 'ship.png';
+     this.img.src = '../images/ship.png';
      this.imgRadius = AS.Ship.IMGRADIUS;
    };
    AS.util.inherits(AS.Ship, AS.MovingObject);

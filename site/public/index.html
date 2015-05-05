@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SMASHtroids</title>
+  </head>
+  <body style="margin:0;background-color:black;">
+    <div id="backgr">
+      <canvas class='game-canvas' id="game-canvas"></canvas>
+      <img src="http://www.sarasotalearningcottage.com/wp-content/uploads/2013/07/space-background.jpg" id="background"
+      style="position:fixed;top:0;left:0;z-index:-1;" />
+      <div class="scoreboard"
+        style="position:fixed;top:20px;left:20px;background:lightgray;height:80px;width:160px;border:5px solid black;border-radius:0.5em;z-index:-1">
+      </div>
+    </div>
+
+
+    <script src="js/keymaster.js"></script>
+    <script src="js/utils.js"></script>
+    <script src='js/movingObject.js'></script>
+    <script src='js/asteroid.js'></script>
+    <script src='js/bullet.js'></script>
+    <script src='js/ship.js'></script>
+    <script src='js/game.js'></script>
+    <script src='js/gameView.js'></script>
+    <script>
+      var bgImg = document.getElementById("background");
+      bgImg.height = window.innerHeight - 4;
+      bgImg.width = window.innerWidth - 4;
+      var canvas = document.getElementsByClassName('game-canvas')[0];
+      canvas.height = window.innerHeight - 4;
+      canvas.width = window.innerWidth - 4;
+      new AS.GameView(canvas.width, canvas.height).start(canvas);
+
+    </script>
+  </body>
+</html>
